@@ -1,0 +1,214 @@
+<?xml version="1.0" ?>
+<items>
+
+  <t_0000>
+    <code>t_0000</code>
+    <name>TシャツA</name>
+    <detail>オシャレなTシャツです。</detail>
+    <price>3900</price>
+    <img>../images/sample_top.jpg</img>
+  </t_0000>
+
+  <t_0001>
+    <code>t_0001</code>
+    <name>TシャツB</name>
+    <detail>かっこいいTシャツです。</detail>
+    <price>2500</price>
+    <img>../images/sample_top1.jpg</img>
+  </t_0001>
+
+  <t_0002>
+    <code>t_0002</code>
+    <name>TシャツC</name>
+    <detail>かわいいTシャツです。</detail>
+    <price>5000</price>
+    <img>../images/sample_top2.jpg</img>
+  </t_0002>
+
+  <t_0003>
+    <code>t_0003</code>
+    <name>TシャツD</name>
+    <detail>派手なTシャツです。</detail>
+    <price>2000</price>
+    <img>../images/sample_top3.jpg</img>
+  </t_0003>
+
+
+  <t_0004>
+    <code>t_0004</code>
+    <name>TシャツE</name>
+    <detail>地味なTシャツです。</detail>
+    <price>1800</price>
+    <img>../images/sample_top4.jpg</img>
+  </t_0004>
+
+  <!--アウター-->
+
+  <o_0000>
+    <code>o_0000</code>
+    <name>アウターA</name>
+    <detail>オシャレなアウターです。</detail>
+    <price>3900</price>
+    <img>../images/sample_outer.jpg</img>
+  </o_0000>
+
+    <o_0001>
+    <code>o_0001</code>
+    <name>アウターB</name>
+    <detail>かっこいいアウターです。</detail>
+    <price>2500</price>
+    <img>../images/sample_outer1.jpg</img>
+    </o_0001>
+
+    <o_0002>
+    <code>o_0002</code>
+    <name>アウターC</name>
+    <detail>かわいいアウターです。</detail>
+    <price>5000</price>
+    <img>../images/sample_outer2.jpg</img>
+    </o_0002>
+
+    <o_0003>
+    <code>o_0003</code>
+    <name>アウターD</name>
+    <detail>派手なアウターです。</detail>
+    <price>2000</price>
+    <img>../images/sample_outer3.jpg</img>
+    </o_0003>
+
+    <o_0004>
+    <code>o_0004</code>
+    <name>アウターE</name>
+    <detail>地味なアウターです。</detail>
+    <price>1800</price>
+    <img>../images/sample_outer4.jpg</img>
+    </o_0004>
+
+  <!--ボトム-->
+
+    <b_0000>
+    <code>b_0000</code>
+    <name>ボトムA</name>
+    <detail>オシャレなボトムです。</detail>
+    <price>3900</price>
+    <img>../images/sample_bottom.jpg</img>
+    </b_0000>
+
+
+    <b_0001>
+    <code>b_0001</code>
+    <name>ボトムB</name>
+    <detail>かっこいいボトムです。</detail>
+    <price>2500</price>
+    <img>../images/sample_bottom1.jpg</img>
+    </b_0001>
+
+    <b_0002>
+    <code>b_0002</code>
+    <name>ボトムC</name>
+    <detail>かわいいボトムです。</detail>
+    <price>5000</price>
+    <img>../images/sample_bottom2.jpg</img>
+    </b_0002>
+
+    <b_0003>
+    <code>b_0003</code>
+    <name>ボトムD</name>
+    <detail>派手なボトムです。</detail>
+    <price>2000</price>
+    <img>../images/sample_bottom3.jpg</img>
+    </b_0003>
+
+    <b_0004>
+    <code>b_0004</code>
+    <name>ボトムE</name>
+    <detail>地味なボトムです。</detail>
+    <price>1800</price>
+    <img>../images/sample_bottom4.jpg</img>
+    </b_0004>
+
+  <!--シューズ-->
+    <s_0000>
+    <code>s_0000</code>
+    <name>シューズA</name>
+    <detail>オシャレなシューズです。</detail>
+    <price>3900</price>
+    <img>../images/sample_shoes.jpg</img>
+   </s_0000>
+
+
+    <s_0001>
+    <code>s_0001</code>
+    <name>シューズB</name>
+    <detail>かっこいいシューズです。</detail>
+    <price>2500</price>
+    <img>../images/sample_shoes1.jpg</img>
+    </s_0001>
+
+
+    <s_0002>
+    <code>s_0002</code>
+    <name>シューズC</name>
+    <detail>かわいいシューズです。</detail>
+    <price>5000</price>
+    <img>../images/sample_shoes2.jpg</img>
+    </s_0002>
+
+    <s_0003>
+    <code>s_0003</code>
+    <name>シューズD</name>
+    <detail>派手なシューズです。</detail>
+    <price>2000</price>
+    <img>../images/sample_shoes3.jpg</img>
+    </s_0003>
+
+    <s_0004>
+    <code>s_0004</code>
+    <name>シューズE</name>
+    <detail>地味なシューズです。</detail>
+    <price>1800</price>
+    <img>../images/sample_shoes4.jpg</img>
+    </s_0004>
+
+  <!--キャップ-->
+    <c_0000>
+    <code>c_0000</code>
+    <name>キャップA</name>
+    <detail>オシャレなキャップです。</detail>
+    <price>3900</price>
+    <img>../images/sample_cap.jpg</img>
+    </c_0000>
+
+    <c_0001>
+    <code>c_0001</code>
+    <name>キャップB</name>
+    <detail>かっこいいキャップです。</detail>
+    <price>2500</price>
+    <img>../images/sample_cap1.jpg</img>
+    </c_0001>
+
+    <c_0002>
+    <code>c_0002</code>
+    <name>キャップC</name>
+    <detail>かわいいキャップです。</detail>
+    <price>5000</price>
+    <img>../images/sample_cap2.jpg</img>
+    </c_0002>
+
+    <c_0003>
+    <code>c_0003</code>
+    <name>キャップD</name>
+    <detail>派手なキャップです。</detail>
+    <price>2000</price>
+    <img>../images/sample_cap3.jpg</img>
+    </c_0003>
+
+    <c_0004>
+    <code>c_0004</code>
+    <name>キャップE</name>
+    <detail>地味なキャップです。</detail>
+    <price>1800</price>
+    <img>../images/sample_cap4.jpg</img>
+    </c_0004>
+
+</items>

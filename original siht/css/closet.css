@@ -1,0 +1,61 @@
+.clear{
+  clear: both;
+}
+
+h1{
+  font-size: 30px;
+  font-weight: 100;
+  text-align: center;
+  margin-top:50px;
+  margin-bottom:30px;
+}
+
+.title{
+  border-style: solid;
+  border-top-width:1px;
+  border-bottom-width:1px;
+  border-color: #000000;
+  padding: 5px;
+}
+
+.name a{
+text-decoration: none;
+  }
+
+.name{
+}
+
+#book_mark{
+  float: left;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+#buy_history{
+  float: left;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.buttonDE{
+  font-size: 14px;
+  font-weight: 100;
+  background: #818184;
+  color: #fff;
+  border: solid 1px;
+}
+.buttonDE:hover {
+  background: #fff;
+   color: #333;
+   border: solid 1px #333;
+  transition: all 0.5s;
+ }
+.buttonDE:active {
+  background: #c00; color: #fff;
+}
+.genericon genericon-cart{
+content: '\f447';
+}
