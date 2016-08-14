@@ -1,0 +1,10 @@
+.name a{
+  color: #000000;
+  text-decoration: none;
+  }
+.name a:hover{
+  text-decoration: underline;
+}
+.img a :hover{
+opacity:0.5;
+}

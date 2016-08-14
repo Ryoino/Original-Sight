@@ -3,10 +3,16 @@ session_start();
 require_once("../util/defineUtil.php");
 require_once("../util/scriptUtil.php");
 
-$code = !empty($_GET['code']) ? $_GET['code'] : "";
+$xml_detail =  simplexml_load_file('../xml/items_detail_full.xml');
 
-$xml_detail =  simplexml_load_file('../xml/items_detail.xml');
-$item_code = $xml_detail->$code;
+//ポストの存在チェックとセッションに値を格納しつつ、連想配列にポストされた値を格納
+$code = array(
+          'code' => code_type('code')
+             );
+
+foreach ($code as $key => $value) {
+  $item_code = $xml_detail->$value;
+}
 
 ?>
 
@@ -15,21 +21,24 @@ $item_code = $xml_detail->$code;
 <head>
 <meta charset="utf-8">
 <title>商品詳細</title>
-<link rel="stylesheet" href="../css/initial.css" media="screen" title="no title" charset="utf-8">
 <link rel="stylesheet" href="../css/header.css" media="screen" title="no title" charset="utf-8">
+<link rel="stylesheet" href="../css/initial.css" media="screen" title="no title" charset="utf-8">
 <link rel="stylesheet" href="../animation/logo.css" media="screen" title="no title" charset="utf-8">
 <link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,300,100' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="../css/genericons/genericons.css" media="screen" title="no title" charset="utf-8">
+<link rel="stylesheet" href="../css/item.css" media="screen" title="no title" charset="utf-8">
 </head>
 <body>
 <?php echo header_top(); ?>
 
-  <?php foreach ($item_code as $detail) {?>
-    <?php $code = $detail->code; ?>
+<?php if (isset($code)){?>
 
-      <span class="name"><?php echo $detail->name;?></span>
+  <?php foreach ($item_code as $detail) {?>
+    <?php $code = $detail->code;?>
+      <span class="name"><a href="#"><?php echo $detail->name;?></a></span>
       <div class="clear"></div>
-      <span class="img"><img src=<?php echo $detail->img;?> width="200px" height="300px"></span>
-      &yen<span class="price"><?php echo $detail->price;?></span>
+      <span class="img"><a href="#"><img src=<?php echo $detail->img;?> width="200px" height="300px"></a></span>
+      <span class="price">&yen<?php echo $detail->price;?></span>
       <div class="clear"></div>
       商品説明：<span class="detail"><?php echo $detail->detail;?></sapn>
 
@@ -37,11 +46,15 @@ $item_code = $xml_detail->$code;
   <div class="clear"></div>
   <br><br>
 
-  <?php }?>
+  <?php }
+  }
+  ?>
 
 <form action="<?php echo MARK_ADD; ?>" method="post">
 <input type="hidden" name="mark" value="MARK">
+
 <input type="hidden" name="mark_code"  value="<?php echo $code;?>">
+
 <input type="submit" name="btnSubmit" value="お気に入り">
 </form>
 

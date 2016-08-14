@@ -15,25 +15,35 @@ $no = (int)$_GET['delete'];
    unset($_SESSION["cart"]);
  }
 
-$cart = !empty($_SESSION["cart"]) ? $_SESSION["cart"] : null;
-$item_code = array();
-if (isset($cart)) {
-  foreach ($cart as $a){
-      $xml_detail = simplexml_load_file('../xml/items_detail.xml');
-      $item_code[] = $xml_detail->$a;
-    }
-}else {
-  echo '<h2>カートの中は空です！</h2>';
-}
-
 ?>
 <!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
 <title>カート</title>
+<link rel="stylesheet" href="../css/header.css" media="screen" title="no title" charset="utf-8">
+<link rel="stylesheet" href="../css/initial.css" media="screen" title="no title" charset="utf-8">
+<link rel="stylesheet" href="../animation/logo.css" media="screen" title="no title" charset="utf-8">
+<link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,300,100' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="../css//genericons/genericons.css" media="screen" title="no title" charset="utf-8">
+</head>
 </head>
 <body>
+  <?php echo header_top(); ?>
+
+  <?php
+  $cart = !empty($_SESSION["cart"]) ? $_SESSION["cart"] : null;
+  $item_code = array();
+  if (isset($cart)) {
+    foreach ($cart as $a){
+        $xml_detail = simplexml_load_file('../xml/items_detail.xml');
+        $item_code[] = $xml_detail->men->$a;
+      }
+  }else {
+    echo '<h2>カートの中は空です！</h2>';
+  }
+  ?>
+
   <?php foreach ($item_code as $key => $detail) {
 $code = $detail->code;
     ?>

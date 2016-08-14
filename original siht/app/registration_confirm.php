@@ -46,7 +46,7 @@ require_once("../util/scriptUtil.php");
    上記の内容で登録します。よろしいですか？
 
     <form action="<?php echo REGISTRATION_COMPLETE ?>" method="POST">
-        <input type="hidden" name="mode" value="RESULT" >
+        <input type="hidden" name="mode" value="COMPLETE" >
         <input type="submit" name="yes" value="はい">
     </form>
     <?php

@@ -3,6 +3,7 @@ session_start();
 require_once("../util/dbaccesUtil.php");
 require_once("../util/defineUtil.php");
 require_once("../util/scriptUtil.php");
+
 ?>
 
 <!doctype html>
@@ -13,11 +14,16 @@ require_once("../util/scriptUtil.php");
 </head>
 <body>
   <?php
+  if(!isset($_POST['mode']) or !$_POST['mode']=="COMPLETE"){//アクセスルートチェック
+    echo 'アクセスルートが不正です。もう一度トップページからやり直してください<br>';
+  }else{
+
   $name = $_SESSION['name'];
   $mail = $_SESSION['mail'];
   $pass = $_SESSION['pass'];
   $postal = $_SESSION['postal'].'-'.$_SESSION['postal1'];
   $address = $_SESSION['address'].$_SESSION['address1'].$_SESSION['address2'];
+
 
   $result = insert_user($name,$mail,$pass,$postal,$address);
 
@@ -30,7 +36,10 @@ require_once("../util/scriptUtil.php");
 	<p>上記の内容で登録しました;</p>
 	<?php }else{
 		echo 'データの挿入に失敗しました。次記のエラーにより処理を中断します:'.$result;
-	}?>
+	}
+}?>
 
+  <br><br>
+    <?php echo return_top(); ?>
 </body>
 </html>

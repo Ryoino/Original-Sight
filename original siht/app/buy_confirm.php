@@ -7,7 +7,7 @@ require_once("../util/scriptUtil.php");
 $cart = $_SESSION["cart"];
 $item_code = array();
 foreach ($cart as $a){
-    $xml_detail = simplexml_load_file('../xml/items_detail.xml');//xml内の情報をオブジェクトに変換
+    $xml_detail = simplexml_load_file('../xml/items_detail_full.xml');//xml内の情報をオブジェクトに変換
     $item_code[] = $xml_detail->$a;
   }
 
@@ -22,6 +22,9 @@ $amount = 0; //合計金額の初期値
 <title>購入確認画面</title>
 </head>
 <body>
+  <?php if(!isset($_POST['mode']) or !$_POST['mode']=="CONFIRM"){//アクセスルートチェック
+  	echo 'アクセスルートが不正です。もう一度トップページからやり直してください<br>';
+  }else{ ?>
 
   <?php foreach ($item_code as $detail) { ?>
     <span class="name"><?php echo $detail->name;?></span>
@@ -49,8 +52,7 @@ $amount = 0; //合計金額の初期値
   <input type="hidden" name="mode" value="BUY">
   <input type="submit" name="btnSubmit" value="この金額で購入する"><br>
   </form>
-
-
+<?php } ?>
 
 
 <br><br>

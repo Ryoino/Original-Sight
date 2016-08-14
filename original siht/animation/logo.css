@@ -110,8 +110,6 @@
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -moz-osx-font-smoothing: grayscale;
-  color: #ffffff;
-  text-decoration: none;
   display: inline-block;
   vertical-align: middle;
 }
@@ -173,11 +171,12 @@
 }
 
 .category ul li a{
-		color:#ffffff;
+		color:#3F3D3D;
 		text-decoration:none;
 		border-bottom:solid 1px;
-		border-color:#a9becf;
+		border-color:#e7ecf0;
 		display: block;
+    padding-bottom: 5px;
 
 		-moz-transition:
 		 	border-width 0.5s linear,
@@ -196,8 +195,7 @@
 }
 
 .category a:hover {
-		color:#1B5282;
-		border-color:#ffffff;
-		padding-bottom: 15px;
+		border-color:#3F3D3D;
+		padding-bottom: 20px;
 		border-width:3px;
 }

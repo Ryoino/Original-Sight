@@ -1,62 +1,112 @@
 .clear{
   clear: both;
 }
+
+#wrap{
+}
+
 body{
   font-family: 'Roboto Mono';
 }
 
 header{
-  background: #a9becf;
-  height: 120px;
+  background: #e7ecf0;
+  height: 100px;
 }
 
+
 .logo{
+  width: 200px;
+  float: left;
+}
+.logo a{
+  color: #3F3D3D;
+  text-decoration: none;
   position: relative;
-  top: 31px;
-  left: 30px;
+  top: 32px;
+  left: 16px;
   font-weight: 100;
-  font-size: 15px;
-  color: #ffffff;
+  font-size: 28px;
+  text-align: center;
   border-top-style: solid;
   border-left-style: solid;
   border-width: 1px;
   padding: 5px;
-  width: 53px;
- }
-
-.my_closet{
-position: relative;
-top: 13px;
-left: 44%;
-right: 44%;
 }
+
+.itembox{
+  position: absolute;
+  left: 69%;
+  top: 28px;
+  display: table;
+  table-layout: fixed;
+  text-align: center;
+  width: 100%;
+}
+.itembox ul li{
+display: table-cell;
+vertical-align: middle;
+
+}
+/*ユーザー名*/
+#username a{
+  background-color: #B5B0B0;
+  text-decoration:none;
+  color: #ffffff;
+  font-size: 13px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+/*ログアウト*/
+input#outbuttn{
+  background-color: rgba(255,255,255,0);
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #B5B0B0;
+}
+/*カート*/
+#cart{
+  padding: 16px;
+  text-align: center;
+  color: #1B5282;
+  margin: 20px;
+  text-decoration: none;
+  border-color: #ffffff;
+  border-style: solid;
+  border-width: 1px;
+  background-color: #ffffff;
+  border-radius: 7px;
+}
+#cart a span{
+  text-decoration: none;
+  color: #1B5282;
+  font-size: 28px;
+}
+/*クローゼット*/
 #closet{
+  margin-right: 23px;
+  margin-left: 23px;
+}
+#closet a{
 text-decoration: none;
-color: #ffffff;
+color: #3F3D3D;
 border-style: solid;
-border-color: #ffffff;
+border-color: #3F3D3D;
 border-width: 1px;
 padding: 20px;
-font-size: 30px;
-}
-
-.cart{
-  position: relative;
-  right: px;
-}
-.cart a{
-  color: #ffffff;
-}
-
-.user {
-  float: right;
 }
 
 /*ログイン*/
 #outmenu{
-  float: right;
+  float: left;
   position: relative;
-
+  left: 20px;
 }
 #inmenu{
   float: right;
@@ -65,18 +115,9 @@ font-size: 30px;
   border-color: #ffffff;
   padding: 20px;
   position: relative;
-  bottom:40px;
   right: 50px;
 }
 #username{
-text-decoration: none;
-color: #ffffff
-}
-#logout{
-  text-decoration: none;
-  color: #ffffff
-}
-#login{
   text-decoration: none;
   color: #ffffff
 }
@@ -85,5 +126,15 @@ color: #ffffff
   color: #ffffff
 }
 #outbuttn{
-background-color: rgba(255,255,255,0.5);
+  background-color: rgba(255,255,255,0.5);
+}
+#login:hover{
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-emphasis-color: #ffffff;
+}
+#registration:hover{
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-emphasis-color: #ffffff;
 }

@@ -23,7 +23,8 @@ require_once("../util/scriptUtil.php");
       if(isset($_POST['name']) && isset($_POST['password'])) {
         // 名前とパスワードでヒットした登録者の情報を配列として格納
         $result = search_profiles($_POST ['name'], $_POST['password']);
-        if ($_POST['name'] == $result[0]['name'] && $_POST['password'] == $result [0]['password']){
+        $flag = 0;
+        if ($_POST['name'] == $result[0]['name'] && $_POST['password'] == $result [0]['password'] &&  $flag == $result[0]['deleteFlg']){
             // 各セッション情報に配列からの値を格納
             $_SESSION['userID'] = $result[0]['userID'];
             $_SESSION["name"] = $result[0]['name'];

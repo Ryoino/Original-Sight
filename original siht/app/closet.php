@@ -13,7 +13,7 @@ if ($delete == "DELETE") {
 
 $userID = $_SESSION['userID'];
 
-$xml_detail =  simplexml_load_file('../xml/items_detail.xml');
+$xml_detail =  simplexml_load_file('../xml/items_detail_full.xml');
 
 //お気に入り
 $book_code = null; //初期値 null を設定
@@ -23,7 +23,6 @@ foreach ($book_mark as $value){
     $book_code[] = $xml_detail->$mark;
   }
 }
-
 //購入履歴
 $buy_code = null; //初期値 null を設定
 $buy_history = search_buy($userID);
@@ -50,6 +49,8 @@ foreach ($buy_history as $value){
 <link rel="stylesheet" href="../css/genericons/genericons/genericons.css" media="screen" title="no title" charset="utf-8">
 </head>
 <body>
+
+
 <?php echo header_top(); ?>
 
   <h1><span class="title">Book Mark</span></h1>
@@ -85,23 +86,22 @@ foreach ($buy_history as $value){
   }?>
 <div class="clear"><div>
 
-</div>
-<h1><span class="title">Buy History</span></h1>
-    <?php
-      if (!is_array($buy_code)) {
-        $buy_code = array();
-    echo '購入履歴はありません';
-    }else {
-      foreach ($buy_code as $buy_detail) {?>
-       <div id="buy_history">
-      <span class="name"><?php echo $buy_detail->name;?></span>
-      <div class="clear"></div>
-      <span class="img"><img src="<?php echo $buy_detail->img;?>" width="200" height="300"></span><br>
-      <div class="clear"></div>
-      &yen<span class="price"><?php echo $buy_detail->price;?></span>
-      <div class="clear"></div>
-      </div>
-    <?php }
-  }?>
+<h1><span class="title">Buy history</span></h1>
+  <?php
+    if (!is_array($buy_code)) {
+      $buy_code = array();
+  echo '購入履歴はありません';
+  }else {
+    foreach ($buy_code as $buy_detail) {?>
+     <div id="buy_history">
+    <span class="name"><?php echo $buy_detail->name;?></span>
+    <div class="clear"></div>
+    <span class="img"><img src="<?php echo $buy_detail->img;?>" width="200" height="300"></span><br>
+    <div class="clear"></div>
+    &yen<span class="price"><?php echo $buy_detail->price;?></span>
+    <div class="clear"></div>
+    </div>
+  <?php }
+}?>
 </body>
 </html>

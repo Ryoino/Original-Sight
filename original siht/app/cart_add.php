@@ -5,15 +5,19 @@ require_once("../util/defineUtil.php");
 require_once("../util/scriptUtil.php");
 ?>
 
-
-
 <!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
 <title>カートに追加画面</title>
+<link rel="stylesheet" href="../css/header.css" media="screen" title="no title" charset="utf-8">
+<link rel="stylesheet" href="../css/initial.css" media="screen" title="no title" charset="utf-8">
+<link rel="stylesheet" href="../animation/logo.css" media="screen" title="no title" charset="utf-8">
+<link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,300,100' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="../css//genericons/genericons.css" media="screen" title="no title" charset="utf-8">
 </head>
 <body>
+<?php echo header_top(); ?>
 
 <?php
 
@@ -31,9 +35,7 @@ if(!isset($_POST['cart']) && $_POST['cart']!=="CART"){
       $_SESSION["cart"] = array();
     }
     array_push($_SESSION["cart"],$_POST['cart_code']);
-    var_dump($_SESSION["cart"]);
-    echo '<p>カートに追加しました</p>
-    <a href="'.CART.'">カートの中身を見る</a>&nbsp;<a href="'.MEN_SEARCH.'">検索結果に戻る</a>';
+    echo '<p>カートに追加しました</p>';
 	}
  }
 }

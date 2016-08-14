@@ -34,7 +34,7 @@ function form_value($name){
 function header_top(){
   return '
   <header>
-  <div class="logo"><a class="hvr-buzz-out" href=" ' . TOP . ' " >OPENET</a></div>
+  <div class="logo"><a href=" '. TOP .'">OPENET</a></div>
   <nav>' . login() . '</nav>
   </header>
   ';
@@ -43,21 +43,19 @@ function header_top(){
 function login(){
   if(isset($_SESSION['userstate']) && $_SESSION['userstate'] =='login'){ // セッションが'login'状態ならリンクつき名前とログアウトボタンを表示
     return '
-    <div id="outmenu">
+    <div class="itembox">
+      <ul>
+      <li id="username"><a href="' . MY_DATA . '">' . $_SESSION['name'] . '様</a>
       <form action="'.LOGIN.'" method="POST">
-        ようこそ<a id="username" href="' . MY_DATA . '">' . $_SESSION['name'] . '</a>さん!
+        <input id="outbuttn" type="submit" name="logout" value="ログアウト"><br></li>
         <input type="hidden" name="mode" value="logout">
-        <input id="outbuttn" type="submit" name="logout" value="ログアウト"><br>
       </form>
-      <div class="clear"></div>
-
-      <div class="cart"><a href=" '. CART .' ">カートの中を見る</a></div><br>
-      </div>
-      <div class="my_closet"><a id="closet" href=" '. CLOSET .' "><span class="hvr-float-shadow"> Closet</span></a>
-      </div>
+       <li id="closet"><a id="closet" href=" '. CLOSET .' "><span class="hvr-float-shadow"> Closet</span></a></li>
+       <li id="cart"><a class="hvr-buzz-out" href=" '. CART .' "><span class="genericon genericon-cart"></span></a>カートを見る</li>
+     </ul>
+    <div>
       ';
   } else { // セッションが'login'状態でないならログインと会員登録のリンクを設置
-
     return '
     <div id="inmenu">
             <a id="login" href="' . LOGIN . '">ログイン</a>
@@ -93,13 +91,27 @@ function ex_typenum($type){
     }
 }
 
-function profile_write($profile){
-  if (isset($profile)) {
-    $_SESSION[$information] = $profile;
-    return $profile;
-  }else {
-    $_SESSION[$profile] = null;
-    return null;
+/**
+ * セッションを初期化する
+ */
+function session_clear(){
+    // セッション変数を全て解除する
+    $_SESSION = array();
+
+    // セッションを切断するにはセッションクッキーも削除する。
+    if (isset($_COOKIE[session_name()])) {
+        setcookie(session_name(), '', time()-42000, '/');
+    }
+
+    // 最終的に、セッションを破壊する
+    session_destroy();
+}
+
+function code_type($code){
+  if(isset($_GET[$code])){
+      return $_GET[$code];
+  }else{
+      $_GET[$code] = null;
+      return null;
   }
 }
- ?>
