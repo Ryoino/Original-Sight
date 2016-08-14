@@ -36,8 +36,8 @@ $no = (int)$_GET['delete'];
   $item_code = array();
   if (isset($cart)) {
     foreach ($cart as $a){
-        $xml_detail = simplexml_load_file('../xml/items_detail.xml');
-        $item_code[] = $xml_detail->men->$a;
+        $xml_detail = simplexml_load_file('../xml/items_detail_full.xml');
+        $item_code[] = $xml_detail->$a;
       }
   }else {
     echo '<h2>カートの中は空です！</h2>';
