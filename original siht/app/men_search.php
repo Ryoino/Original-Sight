@@ -38,6 +38,8 @@ $category_type = array(
 <script type="text/javascript" src="../js/jquery-3.0.0.min.js"></script>
 </head>
 <body>
+    <div id="wrapper">
+      
   <header>
 
   <?php echo header_top(); ?>
@@ -149,5 +151,6 @@ if ($type == '5') { ?>
 ?>
 </div>
 
+</div>
 </body>
 </html>

@@ -17,7 +17,7 @@ require_once("../util/scriptUtil.php");
 <link rel="stylesheet" href="../css/style.css" media="screen" title="no title" charset="utf-8">
 <body>
 
-<div id="wrap">
+<div id="wrapper">
 
   <header>
 
@@ -26,11 +26,11 @@ require_once("../util/scriptUtil.php");
 <div id="jender_women">
       <img src="../images/top_images/gender_women1.jpeg" alt="" width="750px" height="500px"/>
     </div>
-    <div class="clear"><div>
+    <div class="clear"></div>
     <div id="jender_men">
       <img src="../images/top_images/gender_men1.jpeg" alt="" width="750px" height="500px"/>
     </div>
-<div class="clear"><div>
+<div class="clear"></div>
 
   <div id="button">
     <span id="women"><a href="<?php echo WOMEN_SEARCH; ?>">SHOP&nbsp;WOMEN</a></span>
@@ -44,7 +44,9 @@ require_once("../util/scriptUtil.php");
   <li class="list">
    <h3>Contact</h3>
      <ul>
-       <li>〒194-xxxx<br>東京都渋谷区x-x-x<br>TEL:03-5005-xxxx</li>
+       <li><a href="#">〒194-xxxx</a></li>
+       <li><a href="#">東京都渋谷区x-x-x</a></li>
+       <li><a href="#">TEL:03-5005-xxxx</a></li>
      </ul>
    </li>
 

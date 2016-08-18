@@ -49,7 +49,7 @@ foreach ($buy_history as $value){
 <link rel="stylesheet" href="../css/genericons/genericons/genericons.css" media="screen" title="no title" charset="utf-8">
 </head>
 <body>
-
+<div id="wrapper">
 
 <?php echo header_top(); ?>
 
@@ -86,7 +86,7 @@ foreach ($buy_history as $value){
   }?>
 <div class="clear"><div>
 
-<h1><span class="title">Buy history</span></h1>
+<h1><span class="title">Buy History</span></h1>
   <?php
     if (!is_array($buy_code)) {
       $buy_code = array();
@@ -103,5 +103,7 @@ foreach ($buy_history as $value){
     </div>
   <?php }
 }?>
+
+</div>
 </body>
 </html>

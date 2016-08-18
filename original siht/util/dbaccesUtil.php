@@ -41,8 +41,8 @@ function insert_user($name,$mail,$pass,$postal,$address){
 	//db接続を確立
 	$insert_db = connect2MySQL();
 	//DBに全項目のある1レコードを登録するSQL
-	$insert_sql = "INSERT INTO user_t(name,mail,email,postal,address,newDate)"
-			. "VALUES(:name,:mail,:email,:postal,:address,:newDate)";
+	$insert_sql = "INSERT INTO user_t(name,mail,password,postal,address,newDate)"
+			. "VALUES(:name,:mail,:password,:postal,:address,:newDate)";
 			//現在時をdatetime型で取得
 			$datetime =new DateTime();
 			$date = $datetime->format('Y-m-d H:i:s');
@@ -51,7 +51,7 @@ function insert_user($name,$mail,$pass,$postal,$address){
 			//SQL文にセッションから受け取った値＆現在時をバインド
 			$insert_query->bindValue(':name',$name);
 			$insert_query->bindValue(':mail',$mail);
-			$insert_query->bindValue(':email',$pass);
+			$insert_query->bindValue(':password',$pass);
 			$insert_query->bindValue(':postal',$postal);
 			$insert_query->bindValue(':address',$address);
 			$insert_query->bindValue(':newDate',$date);

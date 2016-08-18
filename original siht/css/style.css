@@ -6,6 +6,11 @@ body{
   font-family: 'Roboto Mono';
 }
 
+#wrapper{
+  width: 100%;
+  margin: 0 auto;
+}
+
 header{
   background: #e7ecf0;
   height: 600px;
@@ -42,7 +47,6 @@ header{
 .itembox ul li{
 display: table-cell;
 vertical-align: middle;
-
 }
 /*ユーザー名*/
 #username a{
@@ -135,16 +139,6 @@ padding: 20px;
   text-emphasis-color: #ffffff;
 }
 
-/*#hlinksWrap{
-  float: right;
-}
-#memberNav li{
-  float: left;
-  margin-left: 10px;
-  margin-right: 10px;
-}*/
-
-
 #jender_women{
   float: left;
   position: absolute;
@@ -235,7 +229,6 @@ h3{
 .detail li.list ul li a:hover{
   text-decoration: underline;
 }
-
 .detail li.list ul li span{
   font-size: 22px;
   text-decoration: none;

@@ -19,7 +19,6 @@ require_once("../util/scriptUtil.php");
 <body>
 <?php echo header_top(); ?>
 <?php
-
 if(!isset($_POST['mark']) && $_POST['mark']!=="MARK"){
 	echo return_top().'<br>';
 	"アクセスルートが不正です。もう一度トップページからやり直してください";
@@ -33,7 +32,6 @@ if(!isset($_POST['mark']) && $_POST['mark']!=="MARK"){
   echo '<p>お気に入りに登録しました</p>';
   }
 }
-
 ?>
 </body>
 </html>

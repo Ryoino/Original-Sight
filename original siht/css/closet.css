@@ -1,3 +1,7 @@
+#wrapper{
+  width: 100%;
+  margin: 0 auto;
+}
 .clear{
   clear: both;
 }
@@ -22,30 +26,55 @@ h1{
 text-decoration: none;
   }
 
-.name{
-}
-
 #book_mark{
   float: left;
-  margin-left: 5px;
-  margin-right: 5px;
-  margin-bottom: 30px;
+  position: relative;
+  left: 5%;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-bottom: 80px;
   margin-top: 20px;
 }
 #buy_history{
   float: left;
-  margin-left: 5px;
-  margin-right: 5px;
+  float: left;
+  position: relative;
+  left: 5%;
+  margin-left: 25px;
+  margin-right: 25px;
   margin-bottom: 10px;
   margin-top: 20px;
 }
-
+.cart{
+float: left;
+font-size: 14px;
+font-weight: 400;
+background: #e7ecf0;
+color: #3F3D3D;
+border: solid 1px;
+border-color: #e7ecf0;
+margin-right: 2px;
+border-radius: 7px;
+}
+.cart:hover{
+  background: #fff;
+   color: #333;
+   border: solid 1px #333;
+  transition: all 0.5s;
+}
+.cart:active {
+  background: #c00;
+  color: #fff;
+}
 .buttonDE{
   font-size: 14px;
-  font-weight: 100;
-  background: #818184;
-  color: #fff;
+  font-weight: 400;
+  background: #e7ecf0;
+  color: #3F3D3D;
   border: solid 1px;
+  border-color: #e7ecf0;
+  margin-right: 2px;
+  border-radius: 7px;
 }
 .buttonDE:hover {
   background: #fff;
@@ -55,7 +84,4 @@ text-decoration: none;
  }
 .buttonDE:active {
   background: #c00; color: #fff;
-}
-.genericon genericon-cart{
-content: '\f447';
 }

@@ -1,7 +1,11 @@
+#wrapper{
+  width: 100%;
+  margin: 0 auto;
+}
+
 .clear{
   clear: both;
 }
-
 .category{
   height: 100px;
   background-color: #e7ecf0;
