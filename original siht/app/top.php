@@ -24,11 +24,11 @@ require_once("../util/scriptUtil.php");
   <?php echo header_top(); ?>
 
 <div id="jender_women">
-      <img src="../images/top_images/gender_women1.jpeg" alt="" width="750px" height="500px"/>
+      <img src="../images/top_images/gender_women1.jpeg" alt="" width="750px" height="500"/>
     </div>
     <div class="clear"></div>
     <div id="jender_men">
-      <img src="../images/top_images/gender_men1.jpeg" alt="" width="750px" height="500px"/>
+      <img src="../images/top_images/gender_men1.jpeg" alt="" width="750px" height="500"/>
     </div>
 <div class="clear"></div>
 

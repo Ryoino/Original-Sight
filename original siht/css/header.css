@@ -2,9 +2,6 @@
   clear: both;
 }
 
-#wrap{
-}
-
 body{
   font-family: 'Roboto Mono';
 }
@@ -13,7 +10,6 @@ header{
   background: #e7ecf0;
   height: 100px;
 }
-
 
 .logo{
   width: 200px;
@@ -103,38 +99,19 @@ padding: 20px;
 }
 
 /*ログイン*/
-#outmenu{
-  float: left;
-  position: relative;
-  left: 20px;
-}
-#inmenu{
+.login{
   float: right;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #ffffff;
   padding: 20px;
   position: relative;
   right: 50px;
+  border-style: solid;
+  border-width: 1px;
+  margin-top: 20px;
 }
-#username{
+.login a{
+  color: #3F3D3D;
   text-decoration: none;
-  color: #ffffff
 }
-#registration{
-  text-decoration: none;
-  color: #ffffff
-}
-#outbuttn{
-  background-color: rgba(255,255,255,0.5);
-}
-#login:hover{
+.login a:hover{
   text-decoration: underline;
-  text-decoration-style: solid;
-  text-emphasis-color: #ffffff;
-}
-#registration:hover{
-  text-decoration: underline;
-  text-decoration-style: solid;
-  text-emphasis-color: #ffffff;
 }

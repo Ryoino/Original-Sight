@@ -42,6 +42,8 @@ require_once("../util/scriptUtil.php");
           <input type="hidden" name="before" value="<?php echo $_SERVER['HTTP_REFERER']; ?>">
           <input class="submit" type="submit" name="btnSubmit" value="ログイン">
         </form>
+        <br><br>
+        <div><a style="color:#000000;" href=<?php echo REGISTRATION;?>>新規会員登録</a></div>
   <?php
       }
     }

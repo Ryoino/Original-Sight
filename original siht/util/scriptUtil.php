@@ -57,10 +57,7 @@ function login(){
       ';
   } else { // セッションが'login'状態でないならログインと会員登録のリンクを設置
     return '
-    <div id="inmenu">
-            <a id="login" href="' . LOGIN . '">ログイン</a>
-            <a id="registration" href="' . REGISTRATION . '">会員登録</a>
-    </div>
+    <div class="login"><a href="' . LOGIN . '">ログイン</a></div>
             ';
   }
 }
