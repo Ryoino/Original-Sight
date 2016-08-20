@@ -4,7 +4,7 @@ require_once("../util/dbaccesUtil.php");
 require_once("../util/defineUtil.php");
 require_once("../util/scriptUtil.php");
 
-$cart = $_SESSION["cart"];
+$cart = !empty($_SESSION["cart"]) ? $_SESSION["cart"] : array();
 
 $item_code = array();
 foreach ($cart as $a){
