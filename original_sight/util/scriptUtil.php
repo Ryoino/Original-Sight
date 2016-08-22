@@ -2,7 +2,7 @@
 require_once("../util/defineUtil.php");
 
 function return_top(){
-    return "<a href='http://localhost:8888/develop/original%20siht/app/top.php'>トップへ戻る</a>";
+    return "<a href='http://localhost:8888/develop/original_sight/app/top.php'>トップへ戻る</a>";
 }
 
 function storing_value($name){
