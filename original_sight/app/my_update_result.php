@@ -29,15 +29,15 @@ if(!isset($_POST['mode']) or !$_POST['mode']=="UPRESULT"){//アクセスルー�
 ?>
 <h2>更新しました</h2>
 
-ユーザー名：<input type="text" name="name" value="<?php echo $name; ?>">
+ユーザー名：<?php echo $name; ?>
     <br><br>
-メールアドレス：<input type="text" name="mail" value="<?php echo $mail; ?>">
+メールアドレス：<?php echo $mail; ?>
     <br><br>
-パスワード：<input type="text" name="pass" value="<?php echo $pass;?>">
+パスワード：<?php echo $pass;?>
     <br><br>
-郵便番号：<input type="text" name="postal" value="<?php echo $postal;?>">
+郵便番号：<?php echo $postal;?>
     <br><br>
-住所：<input type="text" name="address" value="<?php echo $address; ?>">
+住所：<?php echo $address; ?>
     <br><br>
 <?php }else{ ?>
 
@@ -47,7 +47,8 @@ if(!isset($_POST['mode']) or !$_POST['mode']=="UPRESULT"){//アクセスルー�
             <input type="submit" name="no" value="登録画面に戻る">
         </form>
 
-<?php }?>
+<?php }
+}?>
 
 <?php echo return_top(); ?>
 </body>

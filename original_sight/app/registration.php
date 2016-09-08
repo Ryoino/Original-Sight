@@ -1,5 +1,8 @@
 <?php
+session_start();
 require_once("../util/defineUtil.php");
+require_once("../util/scriptUtil.php");
+
 ?>
 <!doctype html>
 <html>
@@ -10,17 +13,17 @@ require_once("../util/defineUtil.php");
 <body>
   <form action="<?php echo REGISTRATION_CONFIRM; ?>" method="post">
     ユーザー名：
-    <input type="text" name="name" value=""><br><br>
+    <input type="text" name="name" value="<?php echo form_value('name');?>"><br><br>
     メールアドレス：
-    <input type="text" name="mail" value=""><br><br>
+    <input type="text" name="mail" value="<?php echo form_value('mail');?>"><br><br>
     パスワード：
-    <input type="password" name="pass" value=""><br><br>
+    <input type="password" name="pass" value="<?php echo form_value('pass');?>"><br><br>
     パスワード(確認のためもう一度入力してください):
-    <input type="password" name="pass_ch"><br><br>
+    <input type="password" name="pass_ch" value="<?php echo form_value('pass_ch');?>"><br><br>
     郵便番号 :
-    <input type="text" name="postal" value="" style="width:50px;">-<input type="text" name="postal1" value=""><br><br>
+    <input type="text" name="postal" value="<?php echo form_value('postal');?>" style="width:50px;">-<input type="text" name="postal1" value="<?php echo form_value('postal1');?>"><br><br>
     都道府県：
-    <select name="address">
+    <select name="address"><option value=""><?php echo form_value('address');?></option>
     <option value="">-- 選択して下さい --</option>
     <option value="北海道">北海道</option>
     <option value="青森県">青森県</option>
@@ -71,9 +74,9 @@ require_once("../util/defineUtil.php");
     <option value="沖縄県">沖縄県</option>
     </select><br><br>
     市区町村：
-    <input type="text" name="address1" value=""><br><br>
+    <input type="text" name="address1" value="<?php echo form_value('address1');?>"><br><br>
     番地・ビル名：
-    <input type="text" name="address2" value=""><br><br>
+    <input type="text" name="address2" value="<?php echo form_value('address2');?>"><br><br>
 
     <input type="hidden" name="mode" value="CONFIRM">
     <input type="submit" name="btnsubmit" value="登録確認画面へ">

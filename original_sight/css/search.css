@@ -6,6 +6,13 @@
 .clear{
   clear: both;
 }
+
+header{
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
 .category{
   height: 100px;
   background-color: #e7ecf0;
@@ -48,7 +55,7 @@ text-decoration: none;
 
 
 #item_result{
-  margin-top: 200px;
+  margin-top: 250px;
   margin-left: 60px;
 }
 

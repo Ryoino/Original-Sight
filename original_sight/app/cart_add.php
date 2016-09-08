@@ -3,6 +3,8 @@ session_start();
 require_once("../util/dbaccesUtil.php");
 require_once("../util/defineUtil.php");
 require_once("../util/scriptUtil.php");
+
+$cart = isset($_POST['cart']) ? $_POST['cart']:null;
 ?>
 
 <!doctype html>
@@ -21,7 +23,7 @@ require_once("../util/scriptUtil.php");
 
 <?php
 
-if(!isset($_POST['cart']) && $_POST['cart']!=="CART"){
+if(!isset($cart) && $cart!=="CART"){
 	echo return_top().'<br>';
 	"アクセスルートが不正です。もう一度トップページからやり直してください";
 }else {

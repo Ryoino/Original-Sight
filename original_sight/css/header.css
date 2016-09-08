@@ -2,9 +2,10 @@
   clear: both;
 }
 
-header{
+#header{
   background: #e7ecf0;
   height: 100px;
+  width: 100%;
 }
 
 .logo{

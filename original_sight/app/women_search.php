@@ -36,8 +36,7 @@ $category_type = array(
 <body>
 <div id="wrapper">
   <header>
-
-  <?php echo header_top(); ?>
+<?php echo header_top(); ?>
 
 <div class="jender">WOMEN/<span class="jender_search"><a href="<?php echo MEN_SEARCH;?>">MEN</a></span></div>
 
@@ -57,6 +56,24 @@ $category_type = array(
 <div id="item_result">
 
 <?php foreach ($category_type as $type) {?>
+
+<?php
+    //全てのアイテム
+  if ($type == 'initial'){ ?>
+    <?php foreach ($all as $a) {?>
+      <div class="item">
+      <span class="name"><a href="<?php echo ITEM;?>?code=<?php echo $a->code;?>"><?php echo $a->name;?></a></span>
+      <div class="clear"></div>
+      <span class="img"><a href="<?php echo ITEM;?>?code=<?php echo $a->code;?>"><img src=<?php echo $a->img;?> width="200px" height="300px"></a></span>
+      <div class="clear"></div>
+      <span class="price">&yen<?php echo $a->price;?></span>
+    <div class="clear"></div>
+    <br><br>
+    </div>
+    <?php }?>
+ <?php }?>
+
+
 <?php
     //全てのアイテム
   if ($type == 'all'){ ?>
@@ -71,8 +88,9 @@ $category_type = array(
     <br><br>
     </div>
     <?php }?>
- <?php }
-    //トップス
+ <?php }?>
+
+<?php  //トップス
   if ($type == '1') { ?>
       <?php foreach ($top as $t) {?>
         <div class="item">
@@ -85,8 +103,9 @@ $category_type = array(
       <br><br>
       </div>
       <?php }?>
-<?php }
-    //アウター
+<?php }?>
+
+<?php //アウター
   if ($type == '2') { ?>
     <?php foreach ($outer as $o) {?>
       <div class="item">
@@ -99,8 +118,9 @@ $category_type = array(
         <br><br>
         </div>
         <?php }?>
-<?php }
-    //ボトム
+<?php }?>
+
+<?php //ボトム
   if ($type == '3') { ?>
     <?php foreach ($bottom as $b) {?>
       <div class="item">
@@ -127,8 +147,9 @@ $category_type = array(
         <br><br>
         </div>
         <?php }?>
-<?php }
-    //帽子
+<?php }?>
+
+<?php //帽子
   if ($type == '5') { ?>
     <?php foreach ($cap as $c) {?>
       <div class="item">
@@ -147,5 +168,6 @@ $category_type = array(
 </div>
 
 </div>
+
 </body>
 </html>

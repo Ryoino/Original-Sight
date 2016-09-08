@@ -1,6 +1,6 @@
 <?php
 
-const ROOT_URL = 'http://localhost:8888/develop/original%20siht/app/top.php'; //TOPディレクトリへのURL
+const ROOT_URL = 'http://localhost:8888/develop/original_sight/app/top.php'; //TOPディレクトリへのURL
 const TOP = 'top.php';                                                        //トップページ
 const WOMEN_SEARCH = 'women_search.php';                                      //women検索結果ページ
 const MEN_SEARCH = 'men_search.php';                                          //men検索結果ページ

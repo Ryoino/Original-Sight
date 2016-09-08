@@ -26,17 +26,18 @@ function bind_p2s($name){
 }
 
 function form_value($name){
+if(isset($_POST['mode']) && $_POST['mode']=='REINPUT'){
   if(!empty($_SESSION[$name])){
     return $_SESSION[$name];
   }
+ }
 }
-
 function header_top(){
   return '
-  <header>
+  <div id="header">
   <div class="logo"><a href=" '. TOP .'">OPENET</a></div>
   <nav>' . login() . '</nav>
-  </header>
+  </div>
   ';
 }
 

@@ -8,13 +8,14 @@ require_once("../util/scriptUtil.php");
 <html>
 <head>
 <meta charset="utf-8">
+<meta name="keywords" content="服,ファッション,オシャレ,クローゼット">
 <title>openetオンラインストア</title>
 <link rel="stylesheet" href="../css/header.css" media="screen" title="no title" charset="utf-8">
 <link rel="stylesheet" href="../css/initial.css" media="screen" title="no title" charset="utf-8">
 <link rel="stylesheet" href="../animation/logo.css" media="screen" title="no title" charset="utf-8">
 <link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,300,100' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="../css//genericons/genericons.css" media="screen" title="no title" charset="utf-8">
-<link rel="stylesheet" href="../css/style.css" media="screen" title="no title" charset="utf-8">
+<link rel="stylesheet" href="../css/top.css" media="screen" title="no title" charset="utf-8">
 <body>
 
 <div id="wrapper">
@@ -33,8 +34,8 @@ require_once("../util/scriptUtil.php");
 <div class="clear"></div>
 
   <div id="button">
-    <span id="women"><a href="<?php echo WOMEN_SEARCH; ?>">SHOP&nbsp;WOMEN</a></span>
-    <span id="men"><a href="<?php echo MEN_SEARCH; ?>">SHOP&nbsp;MEN</a></>
+    <span id="women"><a href="<?php echo WOMEN_SEARCH.'?category_type=initial'; ?>">SHOP&nbsp;WOMEN</a></span>
+    <span id="men"><a href="<?php echo MEN_SEARCH.'?category_type=initial'; ?>">SHOP&nbsp;MEN</a></>
   </div>
 </header>
 

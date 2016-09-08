@@ -3,6 +3,8 @@ session_start();
 require_once("../util/dbaccesUtil.php");
 require_once("../util/defineUtil.php");
 require_once("../util/scriptUtil.php");
+
+$mark = isset($_POST['mark']) ? $_POST['mark'] :null;
 ?>
 
 <!doctype html>
@@ -19,7 +21,7 @@ require_once("../util/scriptUtil.php");
 <body>
 <?php echo header_top(); ?>
 <?php
-if(!isset($_POST['mark']) && $_POST['mark']!=="MARK"){
+if(!isset($mark) && $mark!=="MARK"){
 	echo return_top().'<br>';
 	"アクセスルートが不正です。もう一度トップページからやり直してください";
 }else {
